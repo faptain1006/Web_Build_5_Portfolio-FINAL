@@ -17,21 +17,19 @@
 .g-navigation {
     grid-column-start: 2;
     grid-row-start: 1;
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
     display: grid;
+    padding: 30px 0;
     grid-template-columns: auto auto auto auto auto; 
     grid-template-rows: auto;
     grid-template-areas:
     "nav-home nav-resume nav-webapp nav-other hire-me";
+    place-items: center;
 }
 
 
 .g-navigation div{
     text-decoration: none;
     & a {
-        margin: 0 70px;
         text-decoration: none;
         font-size: 1.2rem;
         color: #a4b1cd;
@@ -60,7 +58,7 @@
 .g-navigation div:nth-of-type(5){
     grid-area: hire-me;
     text-align: center;
-    width: 300px;
+    width: 140px;
     & a {
         text-decoration: none;
         color: #49b37d;
@@ -438,7 +436,7 @@
     grid-row-start: 2;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: repeat(7,auto);
+    grid-template-rows: repeat(4,auto);
     grid-template-areas: 
     "my-header"
     "my-other-1" 
@@ -480,7 +478,6 @@
 }
 
 #p-others #s-header {
-    margin-top: 50px;
     text-align: center;
     grid-area: my-header;
 }
@@ -496,9 +493,6 @@
 
 @media screen and (max-width: 600px) {
     .g-navigation {
-        width: 0;
-        background: #111927;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         display: grid;
         grid-template-columns: auto; 
         grid-template-rows: repeat(5,auto);
@@ -509,17 +503,12 @@
         "nav-other"
         "hire-me";
         gap:20px;
+
+        & a {
+            margin: 0 ;
+        }
     }
     
-    .g-navigation div{
-        text-align: left;   
-    }
-
-    .g-navigation div:last-of-type{
-        width: 275px; 
-    }
-
-
     #p-home {
         padding: 50px;
         display: grid;
@@ -573,7 +562,8 @@
         "my-other-1"
         "my-other-2" 
         "my-other-3";
-        gap: 50px;
+        gap: 30px;
+        /* text-align: left; */
     }
     
 }
