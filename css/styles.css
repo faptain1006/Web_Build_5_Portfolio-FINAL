@@ -276,8 +276,8 @@
 
 #p-resume #s-header {
     grid-area: my-name;
-    letter-spacing: 1rem;
-    font-size: 1.3rem;
+    letter-spacing: .5rem;
+    font-size: 1.2rem;
     color: white;
     text-align: center;
     & span {
@@ -448,7 +448,7 @@
     
     & h2 {
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: bold;
         letter-spacing: .3rem;
     }
@@ -491,12 +491,32 @@
     grid-area: my-other-3;
 }
 
-@media screen and (max-width: 900px) {
+
+/* ******************************************************** */
+@media screen and (max-width: 600px) {
+    .g-body {
+        grid-template-columns: auto auto auto;
+    }
+
     .g-navigation {
         display: grid;
-        grid-template-columns: auto; 
-        grid-template-rows: repeat(5,auto);
+        grid-template-columns: auto auto auto; 
+        grid-template-rows: repeat(5, auto);
         grid-template-areas:
+<<<<<<< HEAD
+            "nav-home"
+            "nav-resume"
+            "nav-webapp"
+            "nav-other"
+            "hire-me";
+        gap: 20px;
+
+        a {
+            margin: 0;
+        }
+    }
+
+=======
         "nav-home"
         "nav-resume"
         "nav-webapp"
@@ -509,31 +529,43 @@
         }
     }
     
+>>>>>>> 3188acde4a3f9c7c2ad0e91147aa07eaf7cbb23a
     #p-home {
-        /* padding: 50px; */
         grid-template-columns: auto;
-        grid-template-rows: repeat(6,auto);
+        grid-template-rows: repeat(6, auto);
         grid-template-areas: 
-        "my-titles"
-        "my-image"
-        "my-into"
-        "my-contents"
-        "my-skills"
-        "my-keyskills";        
+            "my-image"
+            "my-titles"
+            "my-into"
+            "my-contents"
+            "my-keyskills"
+            "my-skills";     
     }
 
-    #p-home #s-profile-image {
-            display: hidden;
+    #p-home #s-header div:nth-of-type(2) {
+        display: none;
+    }
+
+    #p-home #s-into div:nth-of-type(1) {
+        display: none;
+    }
+
+    #p-home #s-key-skills div:nth-of-type(1) {
+        display: none;
+    }
+
+    #p-home #s-skills {
+        margin-bottom: 50px;
     }
 
     #p-resume {
         grid-template-columns: auto;
-        grid-template-rows: repeat(4,auto);
+        grid-template-rows: repeat(4, auto);
         grid-template-areas:
-        "my-name"
-        "resume-col1"
-        "resume-col2"
-        "my-cv";
+            "my-name"
+            "resume-col1"
+            "resume-col2"
+            "my-cv";
     }
 
     #p-web-apps {
@@ -542,33 +574,44 @@
         grid-template-columns: auto;
         grid-template-rows: repeat(13, auto);
         grid-template-areas: 
-        "my-gallery"
-        "app-image-1"
-        "app-description-1" 
-        "app-image-2"
-        "app-description-2"
-        "app-image-3"
-        "app-description-3"
-        "app-image-4"
-        "app-description-4"
-        "app-image-5"
-        "app-description-5" 
-        "app-image-6"
-        "app-description-6";
+            "my-gallery"
+            "app-image-1"
+            "app-description-1" 
+            "app-image-2"
+            "app-description-2"
+            "app-image-3"
+            "app-description-3"
+            "app-image-4"
+            "app-description-4"
+            "app-image-5"
+            "app-description-5" 
+            "app-image-6"
+            "app-description-6";
         gap: 10px;
+    }
+
+    #p-web-apps #s-gallery {
+        max-width: 500px;
     }
 
     #p-others {
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: repeat(4,auto);
+        grid-template-rows: repeat(4, auto);
         grid-template-areas: 
+<<<<<<< HEAD
+            "my-header"
+            "my-other-1"
+            "my-other-2" 
+            "my-other-3";
+        gap: 30px;
+=======
         "my-header"
         "my-other-1"
         "my-other-2" 
         "my-other-3";
         gap: 30px;
         /* text-align: left; */
+>>>>>>> 3188acde4a3f9c7c2ad0e91147aa07eaf7cbb23a
     }
-    
 }
