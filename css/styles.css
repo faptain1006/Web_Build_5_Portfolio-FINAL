@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@500&family=Roboto+Mono:wght@300&display=swap');
+
+.g-base {
+    background-color: #111927;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    background-image: url("../images/bg-hero.svg");
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+}
+
+.g-navigation {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto; 
+    grid-template-rows: auto;
+    grid-template-areas:
+    "nav-home nav-resume nav-webapp nav-other hire-me";
+}
+
+
+.g-navigation div{
+    text-decoration: none;
+    & a {
+        margin: 0 70px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: #a4b1cd;
+        font-weight: bold;
+        
+    }
+    & a:hover {
+        color: white;
+    }
+
+}
+
+.g-navigation div:nth-of-type(1){
+    grid-area: nav-home;
+}
+.g-navigation div:nth-of-type(2){
+    grid-area: nav-resume;
+}
+.g-navigation  div:nth-of-type(3){
+    grid-area: nav-webapp;
+}
+.g-navigation div:nth-of-type(4){
+    grid-area: nav-other;
+}
+
+.g-navigation div:nth-of-type(5){
+    grid-area: hire-me;
+    text-align: center;
+    width: 300px;
+    & a {
+        text-decoration: none;
+        color: #49b37d;
+        font-weight: bold;
+        font-size: 1.5rem;
+        letter-spacing: .2rem;
+        padding: 5px;
+        border-radius: 3px;
+    }
+
+    & a:hover {
+        background-color: #49b37d;
+        color: #111927;
+    }
+}
+
+#p-home {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 1.2fr 2fr 1.5fr;
+    /* gap: 40px; */
+    grid-template-areas: 
+    "my-titles my-image"
+    "my-into my-contents"
+    "my-skills my-keyskills";
+    
+}
+
+#p-home #s-header {
+    grid-area: my-titles;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#p-home #s-header div:nth-of-type(1) {
+    padding: 30px;
+    & h3 {
+        
+        font-size: 2.5rem;
+        color: white;
+    }
+    & h3 span {
+        color:#49b37d;
+    }
+}
+
+#p-home #s-header div:nth-of-type(2) {
+    & a {
+        color: #111927;
+        text-decoration: none;
+        background-color: #49b37d;
+        width: 300px;
+        font-size: 2.5rem;
+        color:#111927;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    & a:hover {
+        color: #a4b1cd;
+    }
+}
+
+
+#p-home #s-header div:nth-of-type(3) {
+        letter-spacing: 1.5rem;
+        font-size: 3rem;
+        margin: 100px;
+        & a {
+            color: #a4b1cd;
+        }
+    
+        & a:hover {
+            color: #49b37d;
+        }
+}   
+
+#p-home #s-profile-image {
+    grid-area: my-image;
+    width: 576px;
+    height: 583px;
+    border-radius: 70%;
+    overflow: hidden;
+    place-items: center;
+    margin-top: 100px;
+}
+
+#p-home #s-into {
+    grid-area: my-into;
+    text-align: center;
+    & p {
+        font-size: 2.5rem;
+        color: white;
+    }
+    & span {
+        color:#49b37d;
+    }
+    & div {
+        margin-top: 100px;
+        & a {
+            color: #111927;
+            text-decoration: none;
+            background-color: #49b37d;
+            width: 300px;
+            font-size: 2.5rem;
+            color:#111927;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        & a:hover {
+            color: #a4b1cd;
+        }
+    }
+}
+
+#p-home #s-content {
+    grid-area: my-contents;
+    text-align: center;
+    margin: 100px;
+    & h3 {
+        color:white;
+        letter-spacing: .3rem;
+        font-size: 1.5rem;
+    }
+
+    & p {
+        color: #a4b1cd;
+        font-size: 1.3rem;
+    }
+}
+
+
+#p-home #s-skills {
+    grid-area: my-skills;
+    font-size: 20px;
+    color: white;
+    text-align: left;
+}
+
+
+#p-home #s-skills .container {
+    width: 100%; 
+    background-color: #ddd;
+    
+    & .NOC {
+        width: 80%; 
+        background-color:#49b37d;
+        padding-left: 10px;
+    }
+    & .DATA {
+        width: 80%; 
+        background-color: #49b37d;
+        padding-left: 10px;
+    }
+    & .SYS {
+        width: 60%; 
+        background-color: #49b37d;
+        padding-left: 10px;
+    }
+    & .PROG {
+        width: 70%; 
+        background-color: #49b37d;
+        padding-left: 10px;
+    }
+    & .CYB {
+        width: 50%; 
+        background-color: #49b37d;
+        padding-left: 10px;
+    }
+
+}
+
+#p-home #s-key-skills {
+    grid-area: my-keyskills;
+    & p {
+        
+        font-size: 2.5rem;
+        color: white;
+    }
+    & div {
+        text-align: center;
+        margin-top: 100px;
+        & a {
+            color: #111927;
+            text-decoration: none;
+            background-color: #49b37d;
+            width: 300px;
+            font-size: 2.5rem;
+            color:#111927;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        & a:hover {
+            color: #a4b1cd;
+        }
+    }
+}
+
+/* -------------------------------------------------------------- */
+#p-resume {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns:4fr 4fr;
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas:
+    "my-name my-name"
+    "resume-col1 resume-col2"
+    "my-cv my-cv";
+    place-items: center;
+    padding: 0 100px;
+}
+
+#p-resume #s-header {
+    grid-area: my-name;
+    letter-spacing: 1rem;
+    font-size: 1.3rem;
+    color: white;
+    text-align: center;
+    & span {
+        color: #49b37d;
+    }
+}
+
+#p-resume #s-col1 {
+    grid-area: resume-col1;
+    color:#a4b1cd;
+    & a {
+        color:#a4b1cd;
+        text-decoration: none;
+    }
+    & h3 {
+        letter-spacing: .2rem;
+        color:#49b37d;
+    }
+}
+
+#p-resume #s-col2 {
+    grid-area: resume-col2;
+    color:#a4b1cd;
+    & h3 {
+        letter-spacing: .2rem;
+        color:#49b37d;
+    }
+}
+
+#p-resume #s-download-cv {
+    grid-area: my-cv;
+    margin-bottom: 100px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: .3rem;
+    & a {
+        text-decoration: none;
+        color:#49b37d;
+        font-size: 2rem; 
+        padding: 10px;
+    }
+
+    & a:hover {
+        color:#111927;
+        background-color: #49b37d;
+        border-radius: 10px;
+    }
+}
+
+/* ------------------------------------------------------- */
+
+#p-web-apps {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas: 
+    "my-gallery my-gallery"
+    "app-description-1 app-image-1"
+    "app-description-2 app-image-2"
+    "app-description-3 app-image-3 "
+    "app-description-4 app-image-4"
+    "app-description-5 app-image-5"
+    "app-description-6 app-image-6"
+    ". .";
+    gap: 50px;
+    place-items: center;
+    padding: 0 50px;
+}
+
+#p-web-apps #s-description-1,#s-description-2,#s-description-3,#s-description-4,#s-description-5,#s-description-6{
+    & a {
+        font-size: 1.2rem;
+        color:#49b37d;
+        text-decoration: none;
+        padding: 5px;
+    }
+    & a:hover {
+        color:#111927;
+        background-color: #49b37d;
+        border-radius: 10px;
+    }
+
+    & h3 {
+        font-size: 1.3rem;
+        color:#49b37d;
+        letter-spacing: .3rem;
+    }
+
+    & p, ul {
+        color: #a4b1cd;
+    }
+}
+
+#p-web-apps #s-gallery {
+    grid-area: my-gallery;
+    display: inline;
+    & img {
+        margin: 30px 20px;
+        padding: 10px;
+    }
+
+    & img:hover {
+        background-color: #49b37d;
+        border-radius: 20px;
+    }
+}
+
+#p-web-apps #s-image-1 {
+    grid-area: app-image-1;
+}
+
+#p-web-apps #s-image-2 {
+    grid-area: app-image-2;
+}
+#p-web-apps #s-image-3 {
+    grid-area: app-image-3;
+}
+
+#p-web-apps #s-image-4 {
+    grid-area: app-image-4;
+}
+#p-web-apps #s-image-5 {
+    grid-area: app-image-5;
+}
+
+#p-web-apps #s-image-6 {
+    grid-area: app-image-6;
+}
+
+#p-web-apps #s-description-1{
+    grid-area: app-description-1;
+}
+#p-web-apps #s-description-2{
+    grid-area: app-description-2;
+}
+#p-web-apps #s-description-3{
+    grid-area: app-description-3;
+}
+#p-web-apps #s-description-4{
+    grid-area: app-description-4;
+}
+#p-web-apps #s-description-5{
+    grid-area: app-description-5;
+}
+#p-web-apps #s-description-6{
+    grid-area: app-description-6;
+}
+
+
+
+/* ------------------------------------------------------ */
+#p-others {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(7,auto);
+    grid-template-areas: 
+    "my-header"
+    "my-other-1" 
+    "my-other-2" 
+    "my-other-3";
+    gap: 50px;
+    place-items: center;
+
+    
+    & h2 {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: .3rem;
+    }
+
+    & h3 {
+        color:#49b37d;
+        font-size: 1.2rem;
+        letter-spacing: .2rem; 
+        text-align: center;
+    }
+
+    & img {
+        display: inline-block;
+    }
+
+    & p {
+        color: #a4b1cd;
+    }
+
+    & div:nth-of-type(2), div:nth-of-type(3), div:nth-of-type(4){
+        max-width: 700px;
+        background-color: #263143;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+}
+
+#p-others #s-header {
+    margin-top: 50px;
+    text-align: center;
+    grid-area: my-header;
+}
+#p-others #s-other-1 {
+    grid-area: my-other-1;
+}
+#p-others #s-other-2 {
+    grid-area: my-other-2;
+}
+#p-others #s-other-3 {
+    grid-area: my-other-3;
+}
+
+@media screen and (max-width: 600px) {
+    .g-navigation {
+        width: 0;
+        background: #111927;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: grid;
+        grid-template-columns: auto; 
+        grid-template-rows: repeat(5,auto);
+        grid-template-areas:
+        "nav-home"
+        "nav-resume"
+        "nav-webapp"
+        "nav-other"
+        "hire-me";
+        gap:20px;
+    }
+    
+    .g-navigation div{
+        text-align: left;   
+    }
+
+    .g-navigation div:last-of-type{
+        width: 275px; 
+    }
+
+
+    #p-home {
+        padding: 50px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "my-titles my-image"
+        "my-into my-contents"
+        "my-skills my-keyskills";
+        
+    }
+
+    #p-resume {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas:
+        "my-name"
+        "resume-col1"
+        "resume-col2"
+        "my-cv";
+    }
+
+    #p-web-apps {
+        display: grid;
+        place-items: center;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(13, auto);
+        grid-template-areas: 
+        "my-gallery"
+        "app-image-1"
+        "app-description-1" 
+        "app-image-2"
+        "app-description-2"
+        "app-image-3"
+        "app-description-3"
+        "app-image-4"
+        "app-description-4"
+        "app-image-5"
+        "app-description-5" 
+        "app-image-6"
+        "app-description-6";
+        gap: 10px;
+    }
+
+    #p-others {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas: 
+        "my-header"
+        "my-other-1"
+        "my-other-2" 
+        "my-other-3";
+        gap: 50px;
+    }
+    
+}
