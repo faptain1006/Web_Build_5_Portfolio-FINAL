@@ -271,7 +271,6 @@
     "resume-col1 resume-col2"
     "my-cv my-cv";
     place-items: center;
-    padding: 0 100px;
 }
 
 #p-resume #s-header {
@@ -444,7 +443,7 @@
     "my-other-3";
     gap: 50px;
     place-items: center;
-
+    margin: 50px;
     
     & h2 {
         color: white;
@@ -494,7 +493,7 @@
 
 /* ******************************************************** */
 @media screen and (max-width: 600px) {
-    .g-body {
+    .g-base {
         grid-template-columns: auto auto auto;
     }
 
@@ -503,33 +502,23 @@
         grid-template-columns: auto auto auto; 
         grid-template-rows: repeat(5, auto);
         grid-template-areas:
-<<<<<<< HEAD
-            "nav-home"
-            "nav-resume"
-            "nav-webapp"
-            "nav-other"
-            "hire-me";
-        gap: 20px;
-
-        a {
-            margin: 0;
-        }
-    }
-
-=======
         "nav-home"
         "nav-resume"
         "nav-webapp"
         "nav-other"
         "hire-me";
         gap:20px;
-
-        & a {
-            margin: 0 ;
-        }
     }
     
->>>>>>> 3188acde4a3f9c7c2ad0e91147aa07eaf7cbb23a
+    .g-navigation div{
+        text-align: left;   
+    }
+
+    .g-navigation div:last-of-type{
+        width: 275px; 
+    }
+
+
     #p-home {
         grid-template-columns: auto;
         grid-template-rows: repeat(6, auto);
@@ -568,6 +557,9 @@
             "my-cv";
     }
 
+    #p-resume #s-col1, #s-col2 {
+        padding: 0 50px;
+    }
     #p-web-apps {
         display: grid;
         place-items: center;
@@ -599,19 +591,10 @@
         grid-template-columns: auto;
         grid-template-rows: repeat(4, auto);
         grid-template-areas: 
-<<<<<<< HEAD
-            "my-header"
-            "my-other-1"
-            "my-other-2" 
-            "my-other-3";
-        gap: 30px;
-=======
         "my-header"
         "my-other-1"
         "my-other-2" 
         "my-other-3";
-        gap: 30px;
-        /* text-align: left; */
->>>>>>> 3188acde4a3f9c7c2ad0e91147aa07eaf7cbb23a
+        gap: 50px;
     }
 }
